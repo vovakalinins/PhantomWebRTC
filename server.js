@@ -16,9 +16,9 @@ app.use(cors());
 const server = https.createServer(credentials, app);
 const io = socketIo(server, {
     cors: {
-        origin: "*",  // This is very open; restrict this in production!
+        origin: "*",  // anyone can send request; restrict this in production!
         methods: ["GET", "POST"],
-        allowedHeaders: ["my-custom-header"],
+        allowedHeaders: ["allowCertainHeader"],
         credentials: true
     }
 });
