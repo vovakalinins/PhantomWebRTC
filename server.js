@@ -6,9 +6,9 @@ const path = require('path');
 const cors = require('cors');
 
 // HTTPS credentials
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/analytics-server.icu/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/analytics-server.icu/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/analytics-server.icu/chain.pem', 'utf8');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/websitedomain.com/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/websitedomain.com/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/websitedomain.com/chain.pem', 'utf8');
 const credentials = { key: privateKey, cert: certificate, ca: ca };
 
 const app = express();
